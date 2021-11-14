@@ -1,20 +1,58 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 #html {
-    width:100vw;
+  width: 100vw;
 
-    height:100vh;
-    background-image:
-    url(./images/фон4.jpg) ;
-    background-repeat:no-repeat ;
-    background-size: cover;
-    background-position:top ;
+  height: 100vh;
+  background-image: url(./images/фон4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
-#html img{
-    width:900px;
-    height:900px;
-    object-fit: contain;
+#html img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  animation-name: ghost;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
 
+@keyframes ghost {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50;
+    left: calc(100% - 150px);
+  }
+  50% {
+    top: 50%;
+    left: calc(100% - 150px);
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+.left-top {
+  position: absolute;
+  width: 33vw;
+  height: 33vw;
+  left: 0;
+  top: 0;
+}
+.right-bottom {
+  position: absolute;
+  width: 33vw;
+  height: 33vw;
+  right: 0;
+  bottom: 0;
 }
